@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    span{
+        visibility: hidden;
+        color: red;
+    }
+</style>
+<body>
+    <input type="text" id="nama" placeholder="Silahkan Masukan Nama Anda"><br>
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <input type="email" id="email" placeholder="Silahkan Masukan Email Anda"><br>
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <input type="time" id="jam" placeholder="Silahkan Masukan Jam Terbang "><br>
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <input type="text" id="jumlah" placeholder="Silahkan Masukan Tujuan"><br>
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <input type="number" id="tiket" placeholder="Silahkan Masukan Jumlah Tiket">
+    <span>Nama Tidak Boleh Kosong</span><br>
+    <button onclick="validasi()">Submit</button>
+
+<script>
+    let nama = document.getElementById("nama")
+    let pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (email.match(pattern)) {
+        console.log("Email Benar")
+    }
+    let email = document.getElementById("email")
+    let jam = document.getElementById("jam")
+    let jumlah = document.getElementById("jumlah")
+    let tiket = document.getElementById("tiket")
+    let span = document.getElementsByTagName("span")
+
+    function validasi(){
+        if (nama.value == "" || nama.value.length >= 30 ) {
+            span[0].style.visibility = "visible"
+        }
+        
+        if (email.value == "" || email.value.length >=20) {
+            span[1].style.visibility = "visible"
+        }
+
+        if (jam.value == "" ) {
+            span[2].style.visibility = "visible"
+        }
+
+        if (jumlah.value == "") {
+            span[3].style.visibility = "visible"
+        }
+
+        if (tiket.value == "") {
+            span[4].style.visibility = "visible"
+        }
+    }
+</script>
+</body>
+</html>

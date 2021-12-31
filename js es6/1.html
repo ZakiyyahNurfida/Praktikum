@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            position: fixed;
+            left: 30%;
+            border-radius: 8px;
+            background: #fff;
+            width: 320px;
+            margin: 15px auto;
+            padding: 20px 40px;
+            display: block;
+            text-align: center;
+            border: 2px solid #ddd;
+            box-shadow: 2px 2px #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Login</h1>
+        <form action="login.html">
+            <input type="text" id="nama" placeholder="Useename">
+            <br>
+            <input type="password" id="sandi" placeholder="Password">
+            <button action="submit" onclick="simpan()">Log In</button>
+        </form>
+    </div>
+
+    <script>
+        function simpan() {
+            var nama = document.getElementById("nama").value
+            var sandi = document.getElementById("sandi").value
+
+            if(nama == "zaki21191si" && sandi=="12710110121191"){
+                alert("Login Successfully");
+                return false;
+            } else {
+                alert("Login Failed")
+            }
+        }
+    </script>
+</body>
+</html>

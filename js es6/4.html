@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Picker</title>
+    <style>
+        img {
+            width: 60%;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function pilih(){
+            let list_ras = document.getElementById("ras");
+            let idx = list_ras.selectedIndex;
+            console.log("ras index ke- " + idx + " adalah " + list_ras[idx].value);
+            let area_img = document.getElementById("img");
+            area_img.src="img/"+list_ras[idx].value+".jpg";
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        Pilih Ras Anjing : <select id="ras" onchange="pilih()">
+            <option value="po">Poodle</option>
+            <option value="dal">Dalmatian</option>
+            <option value="mal">Maltese</option>
+            <option value="bul">Bulldog</option>
+            <option value="wel">Welsh Corgi</option>
+        </select>
+    </form>
+    <br>
+    <img src="img/mal.jpg" alt="Ras Maltese" id="img"/>
+</body>
+</html>
